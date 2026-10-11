@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" fill="none">
+  <defs>
+    <linearGradient id="finora-wallet-linear-svg" x1="54.804%" x2="54.804%" y1="100%" y2="5.31%">
+      <stop offset="0%" stop-color="#F4F1FA" />
+      <stop offset="100%" stop-color="#FFFEFF" />
+    </linearGradient>
+  </defs>
+  <!-- Green rounded squircle badge -->
+  <g transform="translate(4, 4) scale(0.95)">
+    <path fill="#21CB87" d="M9.063 0h24.356c5.005 0 9.063 4.107 9.063 9.173v24.654c0 5.066-4.058 9.173-9.063 9.173H9.063C4.058 43 0 38.893 0 33.827V9.173C0 4.107 4.058 0 9.063 0z"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M6.52 12.654c0-2.051 1.638-3.713 3.657-3.713h22.759c2.02 0 3.657 1.662 3.657 3.713v17.905c0 2.05-1.638 3.713-3.657 3.713H10.177c-2.02 0-3.658-1.662-3.658-3.713V12.654z"/>
+    <path fill="url(#finora-wallet-linear-svg)" fill-rule="nonzero" d="M10.104 10.43c-1.167 0-2.112.96-2.112 2.145v18.063c0 1.184.945 2.144 2.112 2.144h22.905c1.167 0 2.112-.96 2.112-2.144V12.575c0-1.184-.945-2.144-2.112-2.144H10.104z"/>
+    <path fill="#E3750C" fill-rule="nonzero" d="M35.542 17.03h.946c.523 0 .947.424.947.947v7.259a.947.947 0 0 1-.947.947h-.946V17.03z"/>
+    <path fill="#FD9F45" fill-rule="nonzero" d="M23.554 21.606c0-2.527 2.03-4.576 4.536-4.576h7.531c.537 0 .972.438.972.98v7.193c0 .541-.435.98-.972.98H28.09c-2.505 0-4.536-2.048-4.536-4.577z"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M28.181 23.842c1.162 0 2.103-.953 2.103-2.13 0-1.175-.941-2.128-2.103-2.128-1.161 0-2.103.953-2.103 2.129 0 1.176.942 2.129 2.103 2.129z"/>
+  </g>
+  <!-- Text -->
+  <text x="56" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22" fill="#0F172A">Finora</text>
+  <text x="56" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="11" fill="#64748B">Manage money smarter</text>
+</svg>

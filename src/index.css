@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Helvetica Neue", "Plus Jakarta Sans", system-ui, sans-serif;
+    --ios-bg: #F2F2F7;
+    --ios-bg-elevated: #FFFFFF;
+    --ios-card: #FFFFFF;
+    --ios-border: rgba(0, 0, 0, 0.05);
+
+    /* Apple iOS System Palette */
+    --ios-blue: #007AFF;
+    --ios-green: #34C759;
+    --ios-indigo: #5856D6;
+    --ios-orange: #FF9500;
+    --ios-pink: #FF2D55;
+    --ios-purple: #AF52DE;
+    --ios-red: #FF3B30;
+    --ios-teal: #5AC8FA;
+    --ios-yellow: #FFCC00;
+    --ios-mint: #00C7BE;
+    --ios-gray: #8E8E93;
+    --ios-gray2: #AEAEB2;
+    --ios-gray3: #C7C7CC;
+    --ios-gray4: #D1D1D6;
+    --ios-gray5: #E5E5EA;
+    --ios-gray6: #F2F2F7;
+  }
+
+  .dark {
+    --ios-bg: #000000;
+    --ios-bg-elevated: #1C1C1E;
+    --ios-card: #1C1C1E;
+    --ios-border: rgba(255, 255, 255, 0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-apple);
+    background-color: var(--ios-bg);
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--ios-bg);
+    color: #1C1C1E;
+    font-family: var(--font-apple);
+    letter-spacing: -0.011em;
+  }
+
+  .dark body {
+    color: #F2F2F7;
+    background-color: var(--ios-bg);
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Apple iOS Widget & Glass Utilities */
+@layer components {
+
+  /* iOS 18 Home Screen Widget Card */
+  .ios-widget {
+    background-color: #FFFFFF;
+    border-radius: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .dark .ios-widget {
+    background-color: #1C1C1E;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* iOS Frosted Translucent Glass */
+  .ios-glass {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .ios-glass {
+    background: rgba(28, 28, 30, 0.82);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* iOS Segmented Control Track */
+  .ios-segmented {
+    background-color: rgba(118, 118, 128, 0.12);
+    border-radius: 9999px;
+    padding: 3px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .dark .ios-segmented {
+    background-color: rgba(118, 118, 128, 0.24);
+  }
+
+  /* iOS App Icon Squircle */
+  .ios-squircle {
+    border-radius: 18px;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Floating animation for hero mockup cards */
+@keyframes gentleFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+/* Custom sleek iOS scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(142, 142, 147, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 142, 147, 0.5);
+}
+
+/* Hide spin buttons for numbers */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Prevent black box outline when clicking Recharts charts or SVGs */
+.recharts-wrapper,
+.recharts-wrapper *,
+.recharts-surface,
+.recharts-surface *,
+.recharts-responsive-container,
+.recharts-responsive-container *,
+.recharts-wrapper:focus,
+.recharts-wrapper:focus-visible,
+.recharts-surface:focus,
+.recharts-surface:focus-visible,
+svg:focus,
+svg:focus-visible,
+path:focus,
+path:focus-visible,
+rect:focus,
+rect:focus-visible {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
