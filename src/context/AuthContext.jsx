@@ -475,7 +475,8 @@ export const AuthProvider = ({ children }) => {
       } else if (err.code === 'auth/operation-not-allowed') {
         throw new Error('Google Sign-In is not enabled yet in Firebase Console. Please enable it under Authentication > Sign-in method.');
       } else if (err.code === 'auth/unauthorized-domain') {
-        throw new Error('Current domain is not authorized in Firebase. Add localhost to Authorized Domains.');
+        const currentDomain = typeof window !== 'undefined' ? window.location.hostname : 'your domain';
+        throw new Error(`Domain "${currentDomain}" is not authorized in Firebase. Please add "${currentDomain}" to Authorized Domains in Firebase Console (Authentication > Settings > Authorized domains).`);
       }
       throw new Error(err.message || 'Google sign-in failed. Please try again.');
     }
@@ -499,7 +500,8 @@ export const AuthProvider = ({ children }) => {
       } else if (err.code === 'auth/operation-not-allowed') {
         throw new Error('GitHub Sign-In is not enabled yet in Firebase Console. Please enable it under Authentication > Sign-in method.');
       } else if (err.code === 'auth/unauthorized-domain') {
-        throw new Error('Current domain is not authorized in Firebase. Add localhost to Authorized Domains.');
+        const currentDomain = typeof window !== 'undefined' ? window.location.hostname : 'your domain';
+        throw new Error(`Domain "${currentDomain}" is not authorized in Firebase. Please add "${currentDomain}" to Authorized Domains in Firebase Console (Authentication > Settings > Authorized domains).`);
       }
       throw new Error(err.message || 'GitHub sign-in failed. Please try again.');
     }
