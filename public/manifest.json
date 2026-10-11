@@ -1,0 +1,21 @@
+{
+  "short_name": "Finora",
+  "name": "Finora - Manage Money Smarter",
+  "icons": [
+    {
+      "src": "/logo2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo1.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#eff0f2",
+  "theme_color": "#009360",
+  "display": "standalone",
+  "orientation": "portrait"
+}

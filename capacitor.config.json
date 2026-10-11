@@ -1,0 +1,8 @@
+{
+  "appId": "com.finora.budget",
+  "appName": "Finora",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
